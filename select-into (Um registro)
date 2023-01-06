@@ -1,0 +1,8 @@
+  
+select tabb.titulo into razao3
+from(
+select a.titulo titulo, rownum numero
+from t_binovo_gpds_dim_projeto a
+) tabb
+
+where numero  = 5;
