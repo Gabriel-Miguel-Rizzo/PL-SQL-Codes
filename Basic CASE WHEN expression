@@ -1,0 +1,45 @@
+DECLARE
+   vpercentual     NUMBER(3);
+   vDepartment_id  employees.employee_id%type := 60;
+BEGIN
+   CASE  
+   WHEN  vDepartment_id = 80 
+   THEN 
+        vpercentual := 10; -- Sales
+   WHEN  vDepartment_id = 20 
+   THEN 
+         vpercentual := 15; -- Marketing
+   WHEN  vDepartment_id = 60 
+   THEN 
+         vpercentual := 20; -- IT
+   ELSE 
+         vpercentual := 5;
+   END CASE;
+   DBMS_OUTPUT.PUT_LINE('Id do Departamento: ' || vDepartment_id);   
+   DBMS_OUTPUT.PUT_LINE('percentual: ' || vpercentual );   
+   
+   END;
+   
+   ---------OR-------------------------------------------------------------------
+   
+   DECLARE
+   vpercentual     NUMBER(3);
+   vDepartment_id  employees.employee_id%type := 60;
+BEGIN
+   CASE  vDepartment_id 
+   WHEN  80 
+   THEN 
+        vpercentual := 10; -- Sales
+   WHEN  20 
+   THEN 
+         vpercentual := 15; -- Marketing
+   WHEN  60 
+   THEN 
+         vpercentual := 20; -- IT
+   ELSE 
+         vpercentual := 5;
+   END CASE;
+   DBMS_OUTPUT.PUT_LINE('Id do Departamento: ' || vDepartment_id);   
+   DBMS_OUTPUT.PUT_LINE('percentual: ' || vPercentual );   
+
+ END;
