@@ -43,3 +43,7 @@ BEGIN
    DBMS_OUTPUT.PUT_LINE('percentual: ' || vPercentual );   
 
  END;
+ 
+ 
+ 
+ --------OBS: Utilizar a primeira forma, pois nela, é possível adicionar maiores condições (and,or,<,>,<=,etc.)  -----------
