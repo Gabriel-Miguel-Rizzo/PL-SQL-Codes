@@ -32,4 +32,4 @@ DBMS_OUTPUT.PUT_LINE('Nome = ' || var_nome);
 
 end;
 
-------Exercício feito por Gabriel usando : select into, loop, rownum e DBMS_OUTPUT com finalidade de criar um Cursor Manual.
+------Exercício feito por Gabriel usando : select into, loop, rownum, subquerys e DBMS_OUTPUT com finalidade de criar um Cursor Manual.
