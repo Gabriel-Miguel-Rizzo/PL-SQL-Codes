@@ -1,0 +1,17 @@
+--------Puting simple values----------
+
+INSERT INTO Customers c (c.CustomerName, c.City, c.Country)
+VALUES ('Cardinal', 'Stavanger', 'Norway');
+
+
+---------Puting column values---------
+
+INSERT INTO customer_lists( first_name, last_name, email, sent )
+
+ SELECT
+ first_name,
+ last_name,
+ email,
+ 0
+ 
+ FROM contacts;
