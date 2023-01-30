@@ -1,0 +1,17 @@
+DECLARE
+vInicio number(10) := 1;
+vFim    number(10) := 100;
+j       number     := 0;
+
+begin
+
+
+FOR i IN REVERSE
+  vInicio..vFim LOOP
+  
+  j := j + 5;
+  DBMS_OUTPUT.PUT_LINE(j);
+  end loop;
+
+
+end;
