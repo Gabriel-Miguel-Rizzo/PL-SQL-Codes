@@ -1,0 +1,12 @@
+DECLARE
+  vNumero  NUMBER(38) :=  1;
+  vLimite  NUMBER(38) := 100;
+BEGIN
+
+
+
+WHILE  vNumero <= vLimite LOOP
+    DBMS_OUTPUT.PUT_LINE('Número =  ' || to_char(vNumero));
+    vNumero := vNUmero + 1;
+END LOOP;
+END;
