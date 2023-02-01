@@ -11,6 +11,11 @@ valor_investido          z_tabela_exercicio.valor_investido%type);
 registro_TabExemplo Registro_dados;
 
 
+--Código acima usado para coletar diferentes tipos de valores de diferentes tabelas ou criar novos campos.
+--Para copiar uma tabela em uma variável RECORD convém utilizar:  Registro_TabExemplo    z_tabela_exercicio%rowtype;
+
+
+
 
 BEGIN
 
