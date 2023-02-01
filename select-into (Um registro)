@@ -9,7 +9,3 @@ where numero  = 5;
 
 
 
------------------OBS-----------------------------
-
- - Usado para colocar o resultado de ROWS em VARIÁVEIS
- - (Diferente do Insert into, que é usado para colocar o resultado de um SELECT em TABELAS)
