@@ -1,0 +1,49 @@
+DECLARE
+
+TYPE Registro_dados IS RECORD
+(
+nome                     z_tabela_exercicio.nome%type,
+numero                   z_tabela_exercicio.numero%type,
+id_cliente               z_tabela_exercicio.id_cliente%type,
+cnpj                     z_tabela_exercicio.cnpj%type,
+valor_investido          z_tabela_exercicio.valor_investido%type);
+
+registro_TabExemplo Registro_dados;
+
+numero_linhas number := 0;
+j             number := 1;
+
+
+
+BEGIN
+
+select count(*) into numero_linhas
+from z_tabela_exercicio;
+
+WHILE j <= numero_linhas LOOP
+
+
+select te.nome, te.numero, te.id_cliente, te.cnpj, te.valor_investido
+into registro_TabExemplo
+
+from (select tei.*, rownum numero_row
+from z_tabela_exercicio tei ) te
+
+where te.numero_row = j ;
+
+j := j + 1;
+
+DBMS_OUTPUT.PUT_LINE
+(
+registro_TabExemplo.nome || ' - ' || 
+registro_TabExemplo.numero || ' - ' || 
+registro_TabExemplo.id_cliente || ' - ' || 
+registro_TabExemplo.cnpj || ' - ' || 
+registro_TabExemplo.valor_investido
+);
+
+END LOOP;
+
+
+
+END;
