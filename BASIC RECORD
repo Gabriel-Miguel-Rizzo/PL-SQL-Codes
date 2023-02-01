@@ -1,0 +1,35 @@
+DECLARE
+
+TYPE Registro_dados IS RECORD
+
+(nome                     z_tabela_exercicio.nome%type,
+numero                   z_tabela_exercicio.numero%type,
+id_cliente               z_tabela_exercicio.id_cliente%type,
+cnpj                     z_tabela_exercicio.cnpj%type,
+valor_investido          z_tabela_exercicio.valor_investido%type);
+
+registro_TabExemplo Registro_dados;
+
+
+
+BEGIN
+
+select te.nome, te.numero, te.id_cliente, te.cnpj, te.valor_investido
+into registro_TabExemplo
+from z_tabela_exercicio te
+where te.numero = 43;
+
+
+DBMS_OUTPUT.PUT_LINE
+(
+'Nome: ' || registro_TabExemplo.nome || ' / '  ||
+'Numero: ' || registro_TabExemplo.numero || ' / ' || 
+'Id_Cliente: ' || registro_TabExemplo.id_cliente || ' / ' || 
+'CNPJ: ' || registro_TabExemplo.cnpj || ' / ' || 
+'Valor Investido: ' || registro_TabExemplo.valor_investido
+);
+
+
+
+
+END;
