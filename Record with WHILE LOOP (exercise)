@@ -10,6 +10,9 @@ valor_investido          z_tabela_exercicio.valor_investido%type);
 
 registro_TabExemplo Registro_dados;
 
+--Código acima usado para criar novas variáveis (ou coletar diversos tipos de variáveis de várias tabelas).
+--Para copiar uma tabela em uma variável RECORD convém utilizar:  Registro_TabExemplo    z_tabela_exercicio%rowtype;
+
 numero_linhas number := 0;
 j             number := 1;
 
