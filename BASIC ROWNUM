@@ -5,3 +5,8 @@ from t_binovo_gpds_dim_projeto a
 ) tabb
 
 where numero  = 5;
+
+
+-----OBS-------
+
+Utilizar sempre uma subquery junto ao ROWNUM
