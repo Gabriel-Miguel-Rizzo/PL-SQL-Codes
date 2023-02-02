@@ -1,0 +1,18 @@
+DECLARE
+  TYPE Numero_Table_Type IS TABLE OF NUMBER(4) 
+  INDEX BY BINARY_INTEGER;
+  Numero_table  Numero_Table_Type;
+  
+BEGIN
+
+  FOR i IN 1..10
+  LOOP
+    Numero_Table(i) := i;
+  END LOOP;
+
+
+  FOR i IN 1..10
+  LOOP
+    DBMS_OUTPUT.PUT_LINE('Associative Array: Indice = ' || TO_CHAR(i) || ', Valor = ' || TO_CHAR(Numero_Table(I)));
+  END LOOP;
+END;
