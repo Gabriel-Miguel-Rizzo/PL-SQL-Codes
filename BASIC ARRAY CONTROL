@@ -1,0 +1,23 @@
+- EXISTS(n)     --Retorna TRUE se o elemento n existe.
+- COUNT         --Retorna o número de elementos.
+- FIRST         --Retorna o primeiro número do índice. Retorna NULL se a Collection está vazia.
+
+- LAST          --Retorna o último   número do índice. Retorna NULL se a Collection está vazia.
+
+- LIMIT         --Retorna o maior possível do índice  
+(apenas VARRAY).
+
+- PRIOR(n)      --Retorna o número do índice anterior a n.
+- NEXT(n)       --Retorna o número do índice posterior a n.
+- EXTENDED(n)   --Para aumentar o tamanho:
+(Apenas Nested Table / Varray)     EXTEND adiciona um elemento nulo.
+                                   EXTEND(n) adiciona n elementos nulos.
+                                   EXTENDED(n,i) adicona n cópias do elemento i.
+                                   
+
+- TRIM          --TRIM remove um elemento do final da Collection. TRIM(n) remove n elementos do final da Collection.
+(Apenas Nested Table)
+
+- DELETE                            --DELETE remove todos os elementos de uma Collection.
+(Associative Array/ Nested Table)   --DELETE(n) remove o elemento n da Collection.
+                                    --DELETE(m,n) remove todos os elementos na faixa m..n da Collection.            
