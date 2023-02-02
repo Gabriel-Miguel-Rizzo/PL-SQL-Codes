@@ -1,0 +1,17 @@
+DECLARE
+  TYPE z_table_type IS TABLE OF z_tabela_exercicio%rowtype
+  INDEX BY BINARY_INTEGER;  -- Type Associative Array
+  z_table  z_table_type;
+BEGIN
+  SELECT *
+    BULK COLLECT INTO z_table 
+  FROM z_tabela_exercicio;
+  FOR i IN z_table.first .. z_table.last  
+  LOOP
+    DBMS_OUTPUT.PUT_LINE(z_table(i).nome || ' - ' || 
+                         z_table(i).numero || ' - ' || 
+                         z_table(i).id_cliente || ' - ' ||
+                         z_table(i).cnpj || ' - ' ||
+                         z_table(i).valor_investido );
+  END LOOP;
+END;
