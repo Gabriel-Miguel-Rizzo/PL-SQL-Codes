@@ -29,3 +29,14 @@ BEGIN
   
   CLOSE employees_cursor; -- Close do Cursor
 END;
+
+
+----------- ATRIBUTOS DE CURSOR EXPLÍCITO ---------
+
+--  %ISOPEN    Boolean   Retorna TRUE se o cursor estiver aberto
+
+--  %NOTFOUND  Boolean   Retorna TRUE se o último FETCH não retornou uma linha.
+
+--  %FOUND     Boolean   Retorna TRUE se o último FETCH retornou uma linha
+
+--  %ROWCOUNT  number    Retorna o numero de linhas reperadas por FETCH até o momento
