@@ -39,6 +39,11 @@ BEGIN
   END LOOP;
 END;
 
+
+OBS: No Cursor FOR LOOP a variável 'employees_record' é criada automaticamente dentro da estrutura FOR LOOP
+
+
+
 ----------- ATRIBUTOS DE CURSOR EXPLÍCITO ---------
 
 --%ISOPEN    Boolean   Retorna TRUE se o cursor estiver aberto
