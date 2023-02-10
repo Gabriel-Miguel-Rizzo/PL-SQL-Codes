@@ -1,0 +1,58 @@
+-- Criando uma Procedure de Banco de Dados
+
+CREATE OR REPLACE PROCEDURE P_DPLAN_BINOVO_INSERE_ZTAB
+  (v_nome              IN z_tabela_exercicio.nome%type        ,
+   v_numero            IN z_tabela_exercicio.numero%type      ,
+   v_id_cliente        IN z_tabela_exercicio.id_cliente%type  ,
+   v_CNPJ              IN z_tabela_exercicio.cnpj%type        ,
+   v_valor_investido   IN z_tabela_exercicio.valor_investido%type
+   )
+IS 
+  -- Nenhuma váriável declarada
+BEGIN
+  
+  INSERT INTO z_tabela_exercicio (
+    nome,
+    numero,
+    id_cliente,
+    CNPJ,
+    valor_investido
+    )
+    
+    
+  VALUES (
+   v_nome       ,            
+   v_numero     ,        
+   v_id_cliente ,      
+   v_CNPJ       ,          
+   v_valor_investido  );
+   
+EXCEPTION
+  WHEN OTHERS THEN
+     RAISE_APPLICATION_ERROR(-20001, 'Erro Oracle ' || SQLCODE || SQLERRM);
+END;
+
+-- Executando a Procedure pelo Bloco PL/SQL
+
+/*BEGIN
+  PRC_INSERE_ZTABELAEXERCICIO('David', 10876, 200, '17.147.449/0001-80',1002000);
+  COMMIT;
+END;
+
+-- Consultando o empregado inserido
+SELECT *
+FROM   z_tabela_exercicio
+WHERE  nome = 'David' AND
+       numero = '10876';
+
+-- Executando a Procedure com o comando EXECUTE do SQL*PLUS
+
+EXEC PRC_INSERE_EMPREGADO('David', 10876, 200, '17.147.449/0001-80',1002000);
+
+COMMIT;
+
+-- Consultando o empregado inserido
+SELECT *
+FROM   z_tabela_exercicio
+WHERE  nome = 'David' AND
+       numero = '10876';
